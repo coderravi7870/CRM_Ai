@@ -34,7 +34,6 @@ export function AuthProvider({ children }) {
 
   const login = useCallback(async (credentials) => {
     const res = await authApi.login(credentials);
-    console.log("res ",res);
     return persist(res);
   }, []);
 
